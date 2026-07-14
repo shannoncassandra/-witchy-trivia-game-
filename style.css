@@ -1,0 +1,99 @@
+/* This gives the whole page a colorful witchy background. */
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #fff7ff;
+  background:
+    radial-gradient(circle at top left, #ff5fd2 0, transparent 28%),
+    radial-gradient(circle at bottom right, #00d8c8 0, transparent 30%),
+    linear-gradient(135deg, #32105f, #65107a 45%, #102f57);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* This is the main game box. */
+.game-card {
+  width: min(90%, 620px);
+  padding: 32px;
+  text-align: center;
+  background: rgba(30, 8, 63, 0.88);
+  border: 3px solid #23e6d4;
+  border-radius: 18px;
+  box-shadow: 0 0 30px rgba(255, 95, 210, 0.6);
+}
+
+/* This styles the title. */
+h1 {
+  margin-top: 0;
+  color: #ffd1f5;
+  text-shadow: 0 0 12px #ff5fd2;
+}
+
+/* This styles the question text. */
+h2 {
+  color: #bdfef8;
+}
+
+/* This adds a small decorative line under the title. */
+.sparkles {
+  color: #ffe66d;
+  letter-spacing: 2px;
+}
+
+/* This class hides screens until JavaScript shows them. */
+.hide {
+  display: none;
+}
+
+/* This makes the answer buttons appear in a neat grid. */
+.answer-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin: 24px 0;
+}
+
+/* This styles every button in the game. */
+button {
+  cursor: pointer;
+  padding: 14px 18px;
+  border: 0;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #21043e;
+  background: linear-gradient(135deg, #ffe66d, #ff8ce3);
+  box-shadow: 0 5px 0 #7a2aa6;
+}
+
+/* This gives buttons a little movement when hovered. */
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 7px 0 #7a2aa6;
+}
+
+/* This gives answer buttons a crystal-like teal color. */
+.answer-button {
+  background: linear-gradient(135deg, #8af7ff, #d79cff);
+}
+
+/* This styles the right-or-wrong message. */
+#message {
+  min-height: 28px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #ffe66d;
+}
+
+/* This keeps the game easy to use on small screens. */
+@media (max-width: 520px) {
+  .game-card {
+    padding: 22px;
+  }
+
+  .answer-grid {
+    grid-template-columns: 1fr;
+  }
+}

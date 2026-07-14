@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Mystic Trivia Challenge</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- This wrapper keeps the whole game centered on the page. -->
+  <main class="game-card">
+    <!-- The main title of the game. -->
+    <h1>The Mystic Trivia Challenge</h1>
+
+    <!-- Decorative witchy symbols for the colorful theme. -->
+    <p class="sparkles">stars - moons - crystals</p>
+
+    <!-- This section shows before the game begins. -->
+    <section id="start-screen">
+      <p>Test your magical knowledge in five quick questions.</p>
+      <button id="start-button">Start Game</button>
+    </section>
+
+    <!-- This section shows the current trivia question and answers. -->
+    <section id="quiz-screen" class="hide">
+      <p id="question-number"></p>
+      <h2 id="question-text"></h2>
+
+      <!-- JavaScript will fill these four buttons with answer choices. -->
+      <div id="answer-buttons" class="answer-grid"></div>
+
+      <!-- This message tells the player if they were right or wrong. -->
+      <p id="message"></p>
+    </section>
+
+    <!-- This section shows after all five questions are answered. -->
+    <section id="end-screen" class="hide">
+      <h2>Your Mystic Score</h2>
+      <p id="final-score"></p>
+      <button id="restart-button">Restart Game</button>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
